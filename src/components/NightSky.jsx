@@ -18,7 +18,7 @@ export default function NightSky({ showMoon = true, count = 18 }) {
     <>
       <div className="kc-sky-fixed" aria-hidden="true">
         <img
-          src="https://dilse.gifts/assets/moonlit-sky-nomoon-D3MNJr_9.jpg"
+          src="/assets/moonlit-sky-nomoon-D3MNJr_9.jpg"
           width={1440}
           height={1200}
           alt=""
@@ -27,7 +27,7 @@ export default function NightSky({ showMoon = true, count = 18 }) {
         <div className="kc-sky-fixed-veil" />
         {showMoon && (
           <img
-            src="https://dilse.gifts/assets/moon-BlawUC1r.png"
+            src="/assets/moon-BlawUC1r.png"
             width={816}
             height={816}
             alt=""

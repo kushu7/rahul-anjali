@@ -7,7 +7,7 @@ export default function BeforeWeBegin({ children, onNext }) {
       {/* Background ambient night sky & moon */}
       <div className="kc-sky-fixed pointer-events-none" aria-hidden="true">
         <img
-          src="https://dilse.gifts/assets/moonlit-sky-nomoon-D3MNJr_9.jpg"
+          src="/assets/moonlit-sky-nomoon-D3MNJr_9.jpg"
           width={1440}
           height={1200}
           alt=""
@@ -15,7 +15,7 @@ export default function BeforeWeBegin({ children, onNext }) {
         />
         <div className="kc-sky-fixed-veil" />
         <img
-          src="https://dilse.gifts/assets/moon-BlawUC1r.png"
+          src="/assets/moon-BlawUC1r.png"
           width={816}
           height={816}
           alt=""
