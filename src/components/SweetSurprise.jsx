@@ -30,13 +30,18 @@ export default function SweetSurprise({ sweetSurprise = {} }) {
     stepRef.current = step;
   }, [step]);
 
+  const chocolateList =
+    sweetSurprise.chocolates && sweetSurprise.chocolates.length > 0
+      ? sweetSurprise.chocolates
+      : CHOCOLATE_IMAGES;
+
   // Preload chocolate assets
   useEffect(() => {
-    CHOCOLATE_IMAGES.forEach((src) => {
+    chocolateList.forEach((src) => {
       const img = new Image();
       img.src = src;
     });
-  }, []);
+  }, [chocolateList]);
 
   // Cleanup timeouts on unmount
   useEffect(() => {
@@ -78,7 +83,7 @@ export default function SweetSurprise({ sweetSurprise = {} }) {
 
         items.push({
           id: idCounterRef.current++,
-          src: CHOCOLATE_IMAGES[(r + c + Math.floor(Math.random() * CHOCOLATE_IMAGES.length)) % CHOCOLATE_IMAGES.length],
+          src: chocolateList[(r + c + Math.floor(Math.random() * chocolateList.length)) % chocolateList.length],
           x: targetX,
           startX: targetX + (Math.random() - 0.5) * 180,
           startY: -height * 0.55 - size - Math.random() * height * 0.45,
